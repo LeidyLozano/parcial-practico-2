@@ -24,7 +24,7 @@ export class UsuarioEntity {
     rol: string;
 
     @Column()
-    jefe: UsuarioEntity;
+    jefe: Long;
 
     @OneToMany(() => ClaseEntity, clase => clase.profesor)
     clases: ClaseEntity[];
