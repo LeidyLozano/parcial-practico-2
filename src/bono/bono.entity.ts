@@ -12,7 +12,7 @@ export class BonoEntity {
     @Column()
     monto: number;
 
-    @Column()
+    @Column({ type: 'decimal'})
     calificacion: number;
 
     @Column()
