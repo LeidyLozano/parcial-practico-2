@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Double, Long, Repository } from 'typeorm';
 import { BusinessError, BusinessLogicException } from 'src/shared/errors/business-errors';
-import { BonoEntity } from './bono.entity/bono.entity';
+import { BonoEntity } from './bono.entity';
 
 
 @Injectable()
@@ -23,7 +23,7 @@ export class BonoService {
         if (!bono)
             throw new BusinessLogicException("El bono con el ID proporcionado no fue encontrado", BusinessError.NOT_FOUND);
         
-        if(bono.calificacion > new Double(4))
+        if(bono.calificacion > 4)
             throw new BusinessLogicException("El bono con el ID proporcionado no puede ser eliminado", BusinessError.BAD_REQUEST);
     }
 }

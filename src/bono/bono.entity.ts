@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
-import { ClaseEntity } from 'src/clase/clase.entity/clase.entity';
-import { UsuarioEntity } from 'src/usuario/usuario.entity/usuario.entity';
+import { ClaseEntity } from 'src/clase/clase.entity';
+import { UsuarioEntity } from 'src/usuario/usuario.entity';
 import { Column, Double, Entity, Long, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
@@ -13,7 +13,7 @@ export class BonoEntity {
     monto: number;
 
     @Column()
-    calificacion: Double;
+    calificacion: number;
 
     @Column()
     palabraClave: string;

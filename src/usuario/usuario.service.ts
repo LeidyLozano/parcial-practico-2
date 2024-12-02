@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { UsuarioEntity } from './usuario.entity/usuario.entity';
+import { UsuarioEntity } from './usuario.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Long, Repository } from 'typeorm';
 import { BusinessError, BusinessLogicException } from 'src/shared/errors/business-errors';

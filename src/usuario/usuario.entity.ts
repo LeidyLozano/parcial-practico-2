@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
-import { BonoEntity } from 'src/bono/bono.entity/bono.entity';
-import { ClaseEntity } from 'src/clase/clase.entity/clase.entity';
+import { BonoEntity } from 'src/bono/bono.entity';
+import { ClaseEntity } from 'src/clase/clase.entity';
 import { Column, Entity, Long, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
@@ -23,8 +23,8 @@ export class UsuarioEntity {
     @Column()
     rol: string;
 
-    @Column()
-    jefe: Long;
+    @Column({nullable:true})
+    jefe: number;
 
     @OneToMany(() => ClaseEntity, clase => clase.profesor)
     clases: ClaseEntity[];
