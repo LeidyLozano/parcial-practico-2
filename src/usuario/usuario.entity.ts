@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
-import { BonoEntity } from 'src/bono/bono.entity';
-import { ClaseEntity } from 'src/clase/clase.entity';
+import { BonoEntity } from '../bono/bono.entity';
+import { ClaseEntity } from '../clase/clase.entity';
 import { Column, Entity, Long, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()

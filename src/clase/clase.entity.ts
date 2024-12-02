@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
-import { BonoEntity } from 'src/bono/bono.entity';
-import { UsuarioEntity } from 'src/usuario/usuario.entity';
-import { Column, Entity, Long, ManyToMany, ManyToOne, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import { BonoEntity } from '../bono/bono.entity';
+import { UsuarioEntity } from '../usuario/usuario.entity';
+import { Column, Entity, Long, ManyToOne, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class ClaseEntity {
